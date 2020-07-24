@@ -1,0 +1,11 @@
+ul{
+    list-style-type: none;
+}
+
+input{
+    width: 50px;
+}
+
+fieldset{
+    display: inline-block;
+}
