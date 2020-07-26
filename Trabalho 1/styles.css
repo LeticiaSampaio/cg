@@ -1,11 +1,81 @@
+/* CG blue: #0081A7
+Verdigris: #00AFB9
+Light Yellow: #FDFCDC
+Peach Puff: #FED9B7
+Bittersweet: #F07167 */
+:root{
+    --main-bg-color: #FDFCDC;
+    --color-1: #0081A7;
+    --color-2: #00AFB9;
+    --color-3: #FED9B7;
+    --color-4: #F07167;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family:'Courier New', Courier, monospace;
+    background-color: var(--main-bg-color);
+}
+
+#content{
+    width: 200px;
+    padding: 25px;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+#draw{
+    margin: 13px;
+    padding: 0;
+    float: right;
+    border: 2px solid var(--color-4);
+    background-color: white;
+}
+
 ul{
     list-style-type: none;
+    padding: 0;
 }
 
 input{
-    width: 50px;
+    width: 70px;
+    border: 1px solid #ddd;
+    border-bottom: 3px solid var(--color-2);
+    margin: 5px;
+}
+
+input:focus{
+    outline: none;
 }
 
 fieldset{
+    width: 150px;
     display: inline-block;
+    border: 2px solid var(--color-4);
+    background-color: white;
+}
+
+legend{
+    border: 2px solid var(--color-4);
+    background-color: var(--color-3);
+}
+
+button{
+    width: 70px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-bottom: 3px solid var(--color-1);
+    margin: 5px;
+    background-color: white;
+}
+
+button:active{
+    background-color: lightgrey;
+    transform: translateY(4px);
+}
+
+button:focus{
+    outline: none;
 }
