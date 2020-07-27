@@ -8,31 +8,59 @@
 </head>
 <body>    
     <div id="content">
-        <fieldset>
-            <legend>Transformações</legend>
-            <ul>
-                <li>Translation</li>
-                <li><label for="sxTrans">Sx: </label><input id="sxTrans" name="sxTrans" type="number"></li>
-                <li><label for="syTrans">Sy: </label><input id="syTrans" name="syTrans" type="number"></li>
-                <li><label for="szTrans">Sz: </label><input id="szTrans" name="szTrans" type="number"></li>
-            </ul>
-            <ul>
-                <li>Rotation</li>
-                <li><label for="sxRot">Sx: </label><input id="sxRot" name="sxRot" type="number"></li>
-                <li><label for="syRot">Sy: </label><input id="syRot" name="syRot" type="number"></li>
-                <li><label for="szRot">Sz: </label><input id="szRot" name="szRot" type="number"></li>
-            </ul>
-            <ul>
-                <li>Scale</li>
-                <li><label for="sxScale">Sx: </label><input id="sxScale" name="sxScale" type="number"></li>
-                <li><label for="syScale">Sy: </label><input id="syScale" name="syScale" type="number"></li>
-                <li><label for="szScale">Sz: </label><input id="szScale" name="szScale" type="number"></li>
-            </ul>
-            <button type="button">Submit</button>
-        </fieldset>
+      <fieldset>
+        <legend>Transformações</legend>
+        <form>
+          <select name="selectModel" id="selectModel">
+            <option disabled selected> -- Transformações -- </option>
+            <option value="translation">Translação</option>
+            <option value="rotation">Rotação</option>
+            <option value="scale">Escala</option>
+            <option value="addModel">Adicionar Modelo</option>
+          </select>
+        </form>
+        <ul class="hidden" id="translation">
+          <li>Translação</li>
+          <li><label for="sxTrans">Sx: </label><input id="sxTrans" name="sxTrans" type="number">px</li>
+          <li><label for="syTrans">Sy: </label><input id="syTrans" name="syTrans" type="number">px</li>
+          <li><label for="szTrans">Sz: </label><input id="szTrans" name="szTrans" type="number">px</li>
+        </ul>
+        <ul class="hidden" id="rotation">
+          <li>Rotação</li>
+          <li><label for="sxRot">Sx: </label><input id="sxRot" name="sxRot" type="number">px</li>
+          <li><label for="syRot">Sy: </label><input id="syRot" name="syRot" type="number">px</li>
+          <li><label for="szRot">Sz: </label><input id="szRot" name="szRot" type="number">px</li>
+        </ul>
+        <ul class="hidden" id="scale">
+          <li>Escala</li>
+          <li><label for="sxScale">Sx: </label><input id="sxScale" name="sxScale" type="number">px</li>
+          <li><label for="syScale">Sy: </label><input id="syScale" name="syScale" type="number">px</li>
+          <li><label for="szScale">Sz: </label><input id="szScale" name="szScale" type="number">px</li>
+        </ul> 
+        <ul class="hidden" id="addModel">
+          <li>Ponto inicial</li>
+          <li><label for="sxRot">Sx: </label><input id="sxRot" name="sxRot" type="number"></li>
+          <li><label for="syRot">Sy: </label><input id="syRot" name="syRot" type="number"></li>
+          <li><label for="szRot">Sz: </label><input id="szRot" name="szRot" type="number"></li>
+        </ul>
+        <ul class="hidden" id="model">
+          <li>Modelo</li>
+          <li><label for="model1" id="model1L">Modelo 1 </label><input type="radio" id="model1" name="model" checked></li>
+          <li><label for="model2" id="model2L">Modelo 2 </label><input type="radio" id="model2" name="model"></li>
+          <li><label for="model3" id="model3L">Modelo 3 </label><input type="radio" id="model3" name="model"></li>
+        </ul>
+        <button type="button">Adicionar</button>
+      </fieldset>
+      <fieldset>
+        <legend>Câmeras</legend>
+      </fieldset>
     </div>
-    
-    <canvas id="draw" width="600" height="600"></canvas>
-    <script src="trabalho1.js"></script>
-</body>
+    <div id="canvas">
+      <fieldset id="canvasFS">
+        <legend>Modelos</legend>
+        <canvas id="draw" width="0" height="0"></canvas>
+      </fieldset>
+    </div>
+    <script src="trabalho1.js"></script>   
+  </body>
 </html>

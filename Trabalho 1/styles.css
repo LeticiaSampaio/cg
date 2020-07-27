@@ -20,18 +20,30 @@ html, body{
 
 #content{
     width: 200px;
-    padding: 25px;
-    margin: 0;
+    margin: 13px;
     display: inline-block;
     text-align: center;
 }
 
-#draw{
+#canvas{
     margin: 13px;
     padding: 0;
     float: right;
-    border: 2px solid var(--color-4);
-    background-color: white;
+}
+
+#model1L{
+    color: var(--color-2);
+    font-weight: bold;
+}
+
+#model2L{
+    color: var(--color-1);
+    font-weight: bold;
+}
+
+#model3L{
+    color: var(--color-4);
+    font-weight: bold;
 }
 
 ul{
@@ -40,7 +52,7 @@ ul{
 }
 
 input{
-    width: 70px;
+    width: 50px;
     border: 1px solid #ddd;
     border-bottom: 3px solid var(--color-2);
     margin: 5px;
@@ -51,10 +63,11 @@ input:focus{
 }
 
 fieldset{
-    width: 150px;
     display: inline-block;
     border: 2px solid var(--color-4);
     background-color: white;
+    min-width: 200px;
+    margin: 5px;
 }
 
 legend{
@@ -64,9 +77,10 @@ legend{
 
 button{
     width: 70px;
+    height: 25px;
     cursor: pointer;
     border: 1px solid #ddd;
-    border-bottom: 3px solid var(--color-1);
+    border-bottom: 3px solid var(--color-2);
     margin: 5px;
     background-color: white;
 }
@@ -74,8 +88,13 @@ button{
 button:active{
     background-color: lightgrey;
     transform: translateY(4px);
+    border-bottom: 3px solid var(--color-1);
 }
 
 button:focus{
     outline: none;
+}
+
+.hidden{
+  display: none;
 }
