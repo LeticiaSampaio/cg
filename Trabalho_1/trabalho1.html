@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Trabalho 1</title>
+      <link rel="stylesheet" href="styles.css">
+  </head>
+  <body onload="Init();">    
+    <div id="content">
+      <fieldset>
+        <legend>Transformações</legend>
+        <form id="actionForm">
+          <label>Modelo<input type="radio" name="typeAction" value="model" checked/></label><br>
+          <label>Camera<input type="radio" name="typeAction" value="camera"/></label>
+        </form>
+        <form>
+          <select name="selectModel" id="selectModel">
+            <option disabled selected> -- Transformações -- </option>
+            <option value="translation">Translação</option>
+            <option value="rotation">Rotação</option>
+            <option value="scale">Escala</option>
+            <option value="addModel" id="addModelCheck">Adicionar Modelo</option>
+            <option value="addCamera" id="addCameraCheck" class="hidden">Adicionar Camera</option>
+          </select>
+        </form>
+        <form>
+        <ul class="hidden" id="translation">
+          <li>Translação</li>
+          <li><label for="sxTrans">x: </label><input id="sxTrans" name="sxTrans" type="range" min="-50" max="50" value="0" class="slider"><span id="xTdemo" class="demo"></span></li>
+          <li><label for="syTrans">y: </label><input id="syTrans" name="syTrans" type="range" min="-50" max="50" value="0" class="slider"><span id="yTdemo"></span></li>
+          <li><label for="szTrans">z: </label><input id="szTrans" name="szTrans" type="range" min="-50" max="50" value="0" class="slider"><span id="zTdemo"></span></li>
+        </ul>
+        </form>
+        <form id="rotationForm">
+        <ul class="hidden" id="rotation">
+          <li>Rotação</li>
+          <li><label for="sxRot">x: </label><input id="sxRot" name="Rotation" type="radio" value="0" checked></li>
+          <li><label for="syRot">y: </label><input id="syRot" name="Rotation" type="radio" value="1"></li>
+          <li><label for="szRot">z: </label><input id="szRot" name="Rotation" type="radio" value="2"></li>
+          <li><label for="szRot">1</label><input id="Rot" name="Rot" type="range" min="1" max="360" value="1" class="slider">360</li><span id="Rdemo"></span>
+        </ul>
+        </form>
+        <form id="scaleForm">
+        <ul class="hidden" id="scale">
+          <li>Escala</li>
+          <li><label for="sxScale">x: </label><input id="sxScale" name="Scale" type="radio" value="0" checked></li>
+          <li><label for="syScale">y: </label><input id="syScale" name="Scale" type="radio" value="1"></li>
+          <li><label for="szScale">z: </label><input id="szScale" name="Scale" type="radio" value="2"></li>
+          <li><label for="szScale">-5</label><input id="Sca" name="Sca" type="range" min="-5" max="5" value="1" class="slider">5</li><span id="Sdemo"></span>
+        </ul> 
+        </form>
+        <ul class="hidden" id="addModel">
+          <li>Ponto inicial</li>
+          <li><label for="sxRot">x: </label><input id="sxRot" name="sxRot" type="number"></li>
+          <li><label for="syRot">y: </label><input id="syRot" name="syRot" type="number"></li>
+          <li><label for="szRot">z: </label><input id="szRot" name="szRot" type="number"></li>
+        </ul>
+        <ul class="hidden" id="addCamera">
+          <li>Ponto inicial</li>
+          <li><label for="sxRot">x: </label><input id="sxRot" name="sxRot" type="number"></li>
+          <li><label for="syRot">y: </label><input id="syRot" name="syRot" type="number"></li>
+          <li><label for="szRot">z: </label><input id="szRot" name="szRot" type="number"></li>
+        </ul>
+        <form id="modelForm" class="hidden">
+          <label for="model1" id="model1L">Modelo 1 <input type="radio" id="model1" name="Model" type="number" value='0' checked></label><br>
+          <label for="model2" id="model2L">Modelo 2 <input type="radio" id="model2" name="Model" value='1'></label>
+        </form>
+        <form id="cameraForm" class="hidden">
+          <label for="camera1" id="camera1L">Camera 1 <input type="radio" id="camera1" name="Camera" value="camera1" checked></label><br>
+          <label for="camera2" id="camera2L">Camera 2 <input type="radio" id="camera2" name="Camera" value="camera2"></label>
+        </form>
+        <button type="button" id="setAction">Adicionar</button>
+      </fieldset>
+      <fieldset>
+        <legend>Lista de ações</legend>
+        <button type="button" id="Go">Go!</button>
+        <button type="button" id="Clear">Limpar</button>
+        <div id="actions"></div>
+      </fieldset>
+    </div>
+    <div id="canvas">
+      <fieldset id="canvasFS">
+        <legend>Modelos</legend>
+        <canvas id="draw" width="0" height="0"></canvas>
+      </fieldset>
+    </div>
+    <script src="https://webglfundamentals.org/webgl/resources/webgl-utils.js"></script>
+    <script src="https://webgl2fundamentals.org/webgl/resources/twgl-full.min.js"></script>
+    <script src="https://webglfundamentals.org/webgl/resources/m4.js"></script>
+    <script src="https://webglfundamentals.org/webgl/resources/webgl-lessons-ui.js"></script>
+    <script src="https://webgl2fundamentals.org/webgl/resources/flattened-primitives.js"></script>
+    <script src="trabalho1.js"></script>   
+  </body>
+</html>

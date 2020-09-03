@@ -1,0 +1,21 @@
+Algoritmo de Bresenham's
+
+O Algoritmo de Bresenham é responsável por fazer o cálculo 
+das coordenadas de x e y que devem ser selecionadas para 
+se fazer uma linha reta entre dois pontos. Devido a sua 
+eficiencia é o Algoritmo mais utilizado para desenhar linhas 
+na tela do computador. Ele utiliza somente adição e subtração
+de inteiros e shift de bit, portanto se torna barato em 
+arquiteturas padrões. 
+
+Inicialmente nosso ponto de partida (x0, y0) deve estar
+mais perto da origem que o ponto de chegada (x1, y1).
+Sendo assim x0 <= x1 e y0 <= y1. Outro ponto importante é
+que na equação da reta, y = ax + b, é importante notarmos que o valor
+de a (ou slope) seja positivo e menor que 1. 
+
+(slide mostrando uma reta e os pontos)
+
+O que o algoritmo de Bresenham faz, basicamente, é ver se 
+a cada incremento de x o valor de y deve ser incrementado
+também. Para isso utilizaremos o seguinte algoritmo:

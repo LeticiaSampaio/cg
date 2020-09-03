@@ -1,0 +1,29 @@
+/* CG blue: #0081A7
+Verdigris: #00AFB9
+Light Yellow: #FDFCDC
+Peach Puff: #FED9B7
+Bittersweet: #F07167 */
+:root{
+    --main-bg-color: #174771;
+    --second-bg-color: #204f78;
+    --color-1: #0077b3;
+    --color-2: #f7c992;
+    --color-3: #FED9B7;
+    --color-4: #F07167;
+    --grey: #ddd;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family:'Courier New', Courier, monospace;
+    background-color: var(--main-bg-color);
+}
+
+.hidden{
+  display: none;
+}
+
+#canvas{
+  position: relative;
+}
